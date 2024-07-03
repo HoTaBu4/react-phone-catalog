@@ -1,21 +1,24 @@
-import React from 'react';
 import './App.scss';
+import React from 'react';
+import Header from './components/Header/Header';
+import Main from './components/Main/Main';
+import Footer from './components/Footer/Footer';
+import { register } from 'swiper/element/bundle';
+import { HashRouter } from 'react-router-dom';
+import { GlobalStateProvider } from './store';
 
-interface Props {
-  onClick: () => void;
-  children: React.ReactNode;
-}
+register();
 
-export const Provider: React.FC<Props> = React.memo(({ onClick, children }) => (
-  <button type="button" onClick={onClick}>
-    {children}
-  </button>
-));
-
-export const App: React.FC = () => {
+export const App = () => {
   return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>TodoList</Provider>
+    <div className="App">
+      <GlobalStateProvider>
+        <HashRouter>
+          <Header />
+          <Main />
+          <Footer />
+        </HashRouter>
+      </GlobalStateProvider>
     </div>
   );
 };

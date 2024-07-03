@@ -2,5 +2,17 @@
   "extends": "@mate-academy/students-ts-config",
   "include": [
     "src"
-  ]
+  ],
+  "compilerOptions": {
+    "jsx": "react",
+    "sourceMap": false,
+    "types": ["node", "cypress"],
+    "noImplicitAny": false,
+    "ignoreDeprecations": "5.0",
+    "suppressImplicitAnyIndexErrors": true,
+    "baseUrl": "./",
+    "paths": {
+      "api/*": ["public/api/*"]
+    }
+  }
 }
