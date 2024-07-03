@@ -37,6 +37,7 @@ const Filter: React.FC<Props> = ({
       // Set the parameter for both sort and itemsOnPage
       newParams.set(type, elem);
     }
+
     setSearchParams(newParams);
   };
 

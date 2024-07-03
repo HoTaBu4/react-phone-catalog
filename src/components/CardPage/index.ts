@@ -28,6 +28,7 @@ export const handleRemoveFromCart = (
   const updatedCart = currentCart.filter(
     (item: Product) => item.itemId !== data.id,
   );
+
   localStorage.setItem('cart', JSON.stringify(updatedCart));
 };
 
@@ -41,6 +42,7 @@ export const handleAddFavourite = (dispatch: Dispatch<any>, data: Details) => {
 
   if (!isItemInCart) {
     const updatedCart = [...currentCart, data];
+
     localStorage.setItem('favourites', JSON.stringify(updatedCart));
   }
 };
@@ -56,5 +58,6 @@ export const handleRemoveFromFavourite = (
   const updatedCart = currentCart.filter(
     (item: Product) => item.itemId !== data.id,
   );
+
   localStorage.setItem('favourites', JSON.stringify(updatedCart));
 };

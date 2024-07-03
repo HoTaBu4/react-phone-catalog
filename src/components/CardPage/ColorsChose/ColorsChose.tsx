@@ -30,6 +30,7 @@ const ColorsChose: React.FC<Props> = ({ selectedProduct }) => {
       if (payload) {
         dispatch({ type: ActionTypes.AddSelectedProduct, payload });
       }
+
       dispatch({ type: ActionTypes.SetIsLoading, payload: { value: false } });
     });
   };

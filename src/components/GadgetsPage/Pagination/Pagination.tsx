@@ -23,6 +23,7 @@ const Pagination: React.FC<Props> = ({
   const handleClick = (elem: number) => {
     handleSetActivePage(elem);
     const params = new URLSearchParams(searchParams);
+
     params.set('page', `${elem}`);
 
     if (elem === 1) {
@@ -34,12 +35,14 @@ const Pagination: React.FC<Props> = ({
 
   const handleSetPrevPage = () => {
     const result = activePage > 1 ? activePage - 1 : activePage;
+
     handleSetActivePage(result);
     handleClick(result);
   };
 
   const handleSetNextPage = () => {
     const result = activePage < pages ? activePage + 1 : activePage;
+
     handleSetActivePage(result);
     handleClick(result);
   };

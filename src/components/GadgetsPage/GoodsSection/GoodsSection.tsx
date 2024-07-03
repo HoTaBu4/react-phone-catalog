@@ -28,7 +28,7 @@ const GoodsSection: React.FC<Props> = ({ cards, filters, type }) => {
   const { sortBy, itemsPerPage } = filters;
 
   const isPagination =
-    itemsPerPage !== 'all' && !location.indexOf(PageType.Favourite);
+    itemsPerPage !== 'all' && !location.includes('favourites');
   const isFavouriteNoItems =
     favourites.length === 0 && type === PageType.Favourite;
 
@@ -37,6 +37,7 @@ const GoodsSection: React.FC<Props> = ({ cards, filters, type }) => {
     const sorted = [...cards].sort((a, b) =>
       sortBy === 'newest' ? b.year - a.year : a.year - b.year,
     );
+
     setSortedCards(sorted);
   }, [cards, sortBy]);
 
@@ -50,12 +51,13 @@ const GoodsSection: React.FC<Props> = ({ cards, filters, type }) => {
     const itemsCount =
       itemsPerPage === 'all' ? sortedCards.length : parseInt(itemsPerPage, 10);
     const totalPages = Math.ceil(sortedCards.length / itemsCount);
-    setPages(totalPages);
-
     const newPaginatedCards: Product[][] = [];
+
     for (let i = 0; i < sortedCards.length; i += itemsCount) {
       newPaginatedCards.push(sortedCards.slice(i, i + itemsCount));
     }
+
+    setPages(totalPages);
     setPaginatedCards(newPaginatedCards);
     setActiveSection(Math.ceil(activePage / 4));
   }, [sortedCards, itemsPerPage, activePage]);
