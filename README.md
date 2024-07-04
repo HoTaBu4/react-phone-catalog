@@ -1,3 +1,7 @@
+# Links
+  - [DEMO LINK](https://hotabu4.github.io/react__phone--catalog/)
+  - [Mockup](https://www.figma.com/design/FRxncC4lfyhs6og1L6FGEU/Phone-catalog-(V2)-Rounded-Style-2?node-id=0-1&t=ydS49mvX2cTB5WPE-0)
+
 ## Getting Started
 
 Follow these instructions to set up and run the project locally.
@@ -5,7 +9,7 @@ Follow these instructions to set up and run the project locally.
 ### Prerequisites
 
 - **Git**: [Install Git](https://git-scm.com/downloads)
-- **Node.js**: Version 14.17.3, [Install Node.js](https://nodejs.org/dist/v14.17.3/)
+- **Node.js**: Version 14.21.3, [Install Node.js](https://nodejs.org/dist/v14.17.3/)
 
 # Used Technologies
 - sass
@@ -22,7 +26,7 @@ Follow these instructions to set up and run the project locally.
     - Install Dependencies
 3. npm start
     - Start the Project
-    - there may some trouble with swiper if so then install it manually,
+    - there may be some troubles with swiper if so then install it manually,
     npm i swiper or npm install swiper
 
 ### Available Scripts

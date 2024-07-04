@@ -110,6 +110,7 @@ const rootReducer = (state: State = initialState, action: Action): State => {
 
         return elem;
       });
+
       localStorage.setItem('cart', JSON.stringify(result));
 
       return {
@@ -128,6 +129,7 @@ const rootReducer = (state: State = initialState, action: Action): State => {
 
         return elem;
       });
+
       localStorage.setItem('cart', JSON.stringify(resultArray));
 
       return {
@@ -166,6 +168,7 @@ type Props = {
 
 export const GlobalStateProvider: React.FC<Props> = ({ children }) => {
   const [state, dispatch] = useReducer(rootReducer, initialState);
+
   useEffect(() => {
     dispatch({ type: ActionTypes.SetIsLoading, payload: { value: true } });
 

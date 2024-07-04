@@ -16,12 +16,14 @@ const CapacitySection: React.FC<Props> = ({ selectedProduct }) => {
 
   const handleClick = (elem: string) => {
     const idForDispatch = `${namespaceId}-${elem}-${color}`.toLowerCase();
+
     dispatch({ type: ActionTypes.SetIsLoading, payload: { value: true } });
 
     getSelectedItem(category, idForDispatch).then(payload => {
       if (payload) {
         dispatch({ type: ActionTypes.AddSelectedProduct, payload });
       }
+
       dispatch({ type: ActionTypes.SetIsLoading, payload: { value: false } });
     });
   };
