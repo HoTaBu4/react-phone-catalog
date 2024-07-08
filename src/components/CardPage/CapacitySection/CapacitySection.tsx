@@ -15,11 +15,10 @@ const CapacitySection: React.FC<Props> = ({ selectedProduct }) => {
     selectedProduct;
 
   const handleClick = (elem: string) => {
-    const correctedColor = color.split(' ').join('-')
+    const correctedColor = color.split(' ').join('-');
 
-    const idForDispatch = `${namespaceId}-${elem}-${correctedColor}`.toLowerCase();
-    console.log(category)
-    console.log(idForDispatch)
+    const idForDispatch =
+      `${namespaceId}-${elem}-${correctedColor}`.toLowerCase();
 
     dispatch({ type: ActionTypes.SetIsLoading, payload: { value: true } });
 
@@ -27,7 +26,6 @@ const CapacitySection: React.FC<Props> = ({ selectedProduct }) => {
       if (payload) {
         dispatch({ type: ActionTypes.AddSelectedProduct, payload });
       }
-      console.log(payload)
 
       dispatch({ type: ActionTypes.SetIsLoading, payload: { value: false } });
     });

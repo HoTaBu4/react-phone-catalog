@@ -121,7 +121,9 @@ const CardPage: React.FC<Props> = ({ type }) => {
                   </div>
                   <hr className="details__second-line" />
                   <div className="details__price">
-                    <h2 className="details__price--regular">${selectedProduct.priceRegular}</h2>
+                    <h2 className="details__price--regular">
+                      ${selectedProduct.priceRegular}
+                    </h2>
                     {isDiscount && (
                       <div className="details__price--discount">
                         ${selectedProduct.priceDiscount}

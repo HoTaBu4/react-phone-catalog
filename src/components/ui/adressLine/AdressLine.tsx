@@ -8,13 +8,12 @@ const AdressLine: React.FC = () => {
   const pathComponents = path.split('/');
   const formattedPath = pathComponents.filter(elem => elem !== '');
   const isLink = (elem: string) => {
-
-    return PageType.Phones === elem ||
-    PageType.Accessories === elem ||
-    PageType.Tablets == elem;
-  }
-
-  console.log(formattedPath)
+    return (
+      PageType.Phones === elem ||
+      PageType.Accessories === elem ||
+      PageType.Tablets == elem
+    );
+  };
 
   return (
     <div className="adress">

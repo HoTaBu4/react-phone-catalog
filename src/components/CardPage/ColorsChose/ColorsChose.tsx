@@ -19,7 +19,11 @@ const ColorsChose: React.FC<Props> = ({ selectedProduct }) => {
     selectedProduct;
 
   const handleOnColorChange = (itemColor: string, e: React.MouseEvent) => {
-    const correctingColor = itemColor.split(' ').length > 1 ? itemColor.split(' ').join('-') : itemColor;
+    const correctingColor =
+      itemColor.split(' ').length > 1
+        ? itemColor.split(' ').join('-')
+        : itemColor;
+
     dispatch({ type: ActionTypes.SetIsLoading, payload: { value: true } });
 
     e.stopPropagation();
@@ -27,13 +31,11 @@ const ColorsChose: React.FC<Props> = ({ selectedProduct }) => {
     const idForDispatch =
       `${namespaceId}-${capacity}-${correctingColor}`.toLowerCase();
 
-    console.log(idForDispatch)
-    console.log(category)
     getSelectedItem(category, idForDispatch).then(payload => {
       if (payload) {
         dispatch({ type: ActionTypes.AddSelectedProduct, payload });
       }
-      console.log(payload)
+
       dispatch({ type: ActionTypes.SetIsLoading, payload: { value: false } });
     });
   };
