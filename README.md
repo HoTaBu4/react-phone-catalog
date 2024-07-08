@@ -2,10 +2,10 @@
   ## - [DEMO LINK](https://hotabu4.github.io/react__phone--catalog/)
 
 ## Project Overview
-    Welcome to my React Device Catalog project! This is a personal pet project where I developed a comprehensive, responsive catalog for browsing and comparing various electronic devices, including phones, tablets, and accessories. The catalog provides a user-friendly interface for exploring product specifications, comparing models, and filtering by different criteria.
+  Welcome to my React Device Catalog project! This is a personal pet project where I developed a comprehensive, responsive catalog for browsing and comparing various electronic devices, including phones, tablets, and accessories. The catalog provides a user-friendly interface for exploring product specifications, comparing models, and filtering by different criteria.
 
 ## Why This Project?
-    This project was created to practice and enhance my skills in modern front-end technologies and to build a full-featured product catalog that includes phones, tablets, and accessories. It demonstrates the use of a contemporary tech stack to create a versatile and engaging user interface.
+  This project was created to practice and enhance my skills in modern front-end technologies and to build a full-featured product catalog that includes phones, tablets, and accessories. It demonstrates the use of a contemporary tech stack to create a versatile and engaging user interface.
 
 ## Prerequisites
 
