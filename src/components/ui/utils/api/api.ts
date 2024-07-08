@@ -59,39 +59,39 @@ export function getSelectedItem(category: string, itemId: string) {
   }
 }
 
-export function getItemByParameters(
-  category: string,
-  name: string,
-  color: string,
-  capacity: string,
-) {
-  switch (category) {
-    case 'Tablets':
-      return getDetailedTablets().then(items =>
-        items.find(
-          product =>
-            product.namespaceId === name &&
-            product.color === color &&
-            product.capacity === capacity,
-        ),
-      );
-    case 'Accessories':
-      return getDetailedAccessories().then(items =>
-        items.find(
-          product =>
-            product.namespaceId === name &&
-            product.color === color &&
-            product.capacity === capacity,
-        ),
-      );
-    default:
-      return getDetailedPhones().then(items =>
-        items.find(
-          product =>
-            product.namespaceId === name &&
-            product.color === color &&
-            product.capacity === capacity,
-        ),
-      );
-  }
-}
+// export function getItemByParameters(
+//   category: string,
+//   name: string,
+//   color: string,
+//   capacity: string,
+// ) {
+//   switch (category) {
+//     case 'Tablets':
+//       return getDetailedTablets().then(items =>
+//         items.find(
+//           product =>
+//             product.namespaceId === name &&
+//             product.color === color &&
+//             product.capacity === capacity,
+//         ),
+//       );
+//     case 'Accessories':
+//       return getDetailedAccessories().then(items =>
+//         items.find(
+//           product =>
+//             product.namespaceId === name &&
+//             product.color === color &&
+//             product.capacity === capacity,
+//         ),
+//       );
+//     default:
+//       return getDetailedPhones().then(items =>
+//         items.find(
+//           product =>
+//             product.namespaceId === name &&
+//             product.color === color &&
+//             product.capacity === capacity,
+//         ),
+//       );
+//   }
+// }
