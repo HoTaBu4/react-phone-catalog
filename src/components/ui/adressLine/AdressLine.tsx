@@ -7,10 +7,14 @@ const AdressLine: React.FC = () => {
   const path = useLocation().pathname;
   const pathComponents = path.split('/');
   const formattedPath = pathComponents.filter(elem => elem !== '');
-  const isLink = elem =>
-    PageType.Accessories === elem ||
+  const isLink = (elem: string) => {
+
+    return PageType.Phones === elem ||
     PageType.Accessories === elem ||
     PageType.Tablets == elem;
+  }
+
+  console.log(formattedPath)
 
   return (
     <div className="adress">
