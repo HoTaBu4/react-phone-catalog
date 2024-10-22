@@ -1,4 +1,4 @@
-### 📱React Phone Catalog
+### 📱Tech spot
   ## - [DEMO LINK](https://hotabu4.github.io/react__phone--catalog/)
 
 ## Project Overview
